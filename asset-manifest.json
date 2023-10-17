@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/food-plaza/static/css/main.c64d1640.css",
+    "main.js": "/food-plaza/static/js/main.a3d44d4a.js",
+    "index.html": "/food-plaza/index.html",
+    "main.c64d1640.css.map": "/food-plaza/static/css/main.c64d1640.css.map",
+    "main.a3d44d4a.js.map": "/food-plaza/static/js/main.a3d44d4a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c64d1640.css",
+    "static/js/main.a3d44d4a.js"
+  ]
+}
