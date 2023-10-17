@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './style.css'
 import Menu from './menuApi'
 import MenuCard from './MenuCard'
@@ -16,7 +16,7 @@ const uniqueList = [
 const Resturant = () => {
     const [menuData, setMenuData] = React.useState(Menu);
     
-    const [menuList, setMenuList] = React.useState(uniqueList);
+    const [menuList,] = React.useState(uniqueList);
 
     const filterItem = (category) => {
 

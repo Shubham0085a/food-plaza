@@ -6,7 +6,7 @@ const MenuCard = ({ menuData }) => {
     <>
       <section className="main-card--cointainer">
       {menuData.map((curElem) => {
-        const {id, name, category, image, description } = curElem;
+        const {id, name, photo, description } = curElem;
         return (
           <>
             <div className="card-container" key={id}>
@@ -22,10 +22,7 @@ const MenuCard = ({ menuData }) => {
                   </span>
                   <div className="card-read">Read</div>
                 </div>
-                <img 
-                src={image}
-                alt="image" 
-                className='card-media' />
+                <img src="baz" alt={`Baz taking a ${photo}`} />
                 <span className="card-tag subtle">Order Now</span>
               </div>
             </div>
