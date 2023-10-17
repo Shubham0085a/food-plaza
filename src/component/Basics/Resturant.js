@@ -1,8 +1,8 @@
-import React from 'react'
-import './style.css'
-import Menu from './menuApi'
-import MenuCard from './MenuCard'
-import Navbar from './Navbar'
+import React, { useState } from "react";
+import "./style.css";
+import Menu from "./menuApi.js";
+import MenuCard from "./MenuCard";
+import Navbar from "./Navbar";
 
 const uniqueList = [
   ...new Set(
@@ -13,30 +13,31 @@ const uniqueList = [
   "All",
 ];
 
+console.log(uniqueList);
+
 const Resturant = () => {
-    const [menuData, setMenuData] = React.useState(Menu);
-    
-    const [menuList,] = React.useState(uniqueList);
+  const [menuData, setMenuData] = useState(Menu);
+  const [menuList] = useState(uniqueList);
 
-    const filterItem = (category) => {
+  const filterItem = (category) => {
+    if (category === "All") {
+      setMenuData(Menu);
+      return;
+    }
 
-      if( category === "All") {
-        setMenuData(Menu);
-        return;
-      }
+    const updatedList = Menu.filter((curElem) => {
+      return curElem.category === category;
+    });
 
-      const updatedList = Menu.filter((curElem) => {
-        return curElem.category === category;
-      });
-      setMenuData(updatedList);
-    };
-  
+    setMenuData(updatedList);
+  };
+
   return (
     <>
-     <Navbar filterItem={filterItem} menuList={menuList}/>
-     <MenuCard menuData={menuData} />
+      <Navbar filterItem={filterItem} menuList={menuList} />
+      <MenuCard menuData={menuData} />
     </>
-  )
-}
+  );
+};
 
-export default Resturant
+export default Resturant;
